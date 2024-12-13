@@ -10,9 +10,6 @@ import com.kibernumacademy.order.client.UserServiceFallback;
 @FeignClient(name="user-service", fallback=UserServiceFallback.class)
 public interface IUserServiceClient {
 
-
-  @GetMapping("/users/{id}")
-  User getUserById(@PathVariable("id") Long id);
-
-  
+  @GetMapping("/users/{id}") 
+  User getUserById(@PathVariable("id") Long id); 
 }
